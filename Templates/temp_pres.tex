@@ -1,0 +1,140 @@
+
+\documentclass{beamer}
+\usepackage{Styles/style_pres}
+% This packages brings is all presentation specfic custom commands and automatically sets the Princeton-inspired presentation style.
+
+\title{Title}
+\author{Names}
+\date{Date}
+
+\AllowAnimationsfalse
+% This command does not allow animations of any kind to take place.
+% The default is set to "\AllowAnimationstrue".
+
+\begin{document}
+
+\titleandoutline
+% This command generates the title and outline slides.
+
+\bettersection{Motivation and Background}
+% This command reates a repeated outline slide and ensures name of section is on every subslides subtitle.
+
+\betterframe{Description: Motivation Slide}{
+    % This command creates a frame with an empty starting slide for slide animation.
+    % If you would not like a empty starting frame the run the command "\betterframe[false]{Motivation}".
+    \bo{enumerate}{0.25cm}
+    % This command animates enumerate (or itemize) with 0.25cm spacing between bullets.
+        \bitem{Applied Math Path:}
+        \bi{itemize}{0.125cm}
+        % This command animates itemize (or enumerate) with 0.5cm spacing between bullets and the parent "\bo{#1}{#2}\eo{#1}".
+            \item Motivate (\textit{motivation}) why the your area of research is important to the real world and (\textit{problem}) why the current mathematical tools are inadequate at solving related problems.
+            % This command is equivalent to \item \textbf{#1} = \bitem{#1}.
+        \ei{itemize}
+        \bitem{Pure Math Path:}
+        \bi{itemize}{0.125cm}
+            \item Motivate (\textit{motivation}) why the proposed area of mathematical research has the possibility to expand human understanding and (\textit{problem}) why related problems are difficult.
+        \ei{itemize}
+        \bitem{Experimental Path:}
+        \bi{itemize}{0.125cm}
+            \item Motivate (\textit{motivation}) why the proposed experimental results have the possibility to expand human understanding and (\textit{problem}) why these experimental results are difficult to gather.
+        \ei{itemize}
+    \eo{enumerate}
+}
+
+\betterframe{Background Slide}{
+    \bo{enumerate}{0.25cm}
+        \iitem{Applied Math Path:}
+        \bi{itemize}{0.125cm}
+            \item Review relevant literature (\textit{literature review}) attempting to solve the same problem.
+            Next, (\textit{problem focus}) discuss what aspect of the problem you plan to focus on during this talk.
+            % This command is equivalent to \item \textit{#1} = \bitem{#1}.
+            Finally, (\textit{proposed solution}) describe the proposed solution in one \alert{nontechnical} sentence.
+        \ei{itemize}
+        \iitem{Pure Math Path:}
+        \bi{itemize}{0.125cm}
+            \item Review relevant literature (\textit{literature review}) of (1) investigative studies that substantiate your existence argument for a knowledge gap and/or (2) previous attempts to solve the same problem.
+            Next, (\textit{problem focus}) discuss what aspect of the problem you plan to focus on during this talk.
+            Finally, (\textit{proposed solution}) describe the proposed solution in one \alert{nontechnical} sentence.
+        \ei{itemize}
+        \iitem{Experimental Path:}
+        \bi{itemize}{0.125cm}
+            \item See Pure Math Path.
+        \ei{itemize}
+    \eo{enumerate}
+}
+
+\bettersection{Set Up}
+
+\betterframe{Set Up Slide}{
+    \bo{enumerate}{0.25cm}
+        \bitem{Applied Math Path:}
+        \bo{itemize}{0.125cm}
+            \item Set up (\textit{set up}) the mathematical prerequisite knowledge we intend to use in development of our solution.
+            Additionally, build intuition (\textit{intuition}) on how your solution was inspired.
+            Finally, (\textit{solution}) state the proposed solution and its associated theorems.
+            \alert{All proofs are listed in appendix}.
+        \eo{itemize}
+        \bitem{Pure Math Path:}
+        \bo{itemize}{0.125cm}
+            \item Set up (\textit{set up}) the mathematical prerequisite knowledge we intend to use in development of our solution.
+            Finally, build intuition (\textit{intuition}) on how your solution was inspired.
+            \alert{All proofs are listed in appendix}.
+        \eo{itemize}
+        \bitem{Experimental Path:}
+        \bo{itemize}{0.125cm}
+            \item Set up (\textit{set up}) the appropriate prerequisite knowledge required in the discussed experimental set up.
+            Finally, build intuition (\textit{intuition}) behind the intended experimental set up.
+        \eo{itemize}
+    \ei{enumerate}
+}
+
+\bettersection{Results}
+
+\betterframe{Results Slide}{
+    \bo{itemize}{0.25cm}
+        \bitem{Applied Math Path:}
+        \bo{itemize}{0.125cm}
+            \item Discuss the real-world and/or numerical experiment (\textit{experiment}) you intend to use to validate your solution.
+            Include what sampling methods (\textit{methods}) were used and the necessary information to recreate the results. 
+            Finally, discuss qualitative and quantitative results that best describe, and argue for, the solution methods existence in literature.
+        \eo{itemize}
+        \bitem{Pure Math Path:}
+        \bo{itemize}{0.125cm}
+            \item Provide a detailed sketch (\textit{un-detailed sketch}) a \alert{un-detailed} sketch of the mathematical problem's proof.
+            Finally, develop more \alert{detailed} slides  (\textit{detailed sketch}) the align with, are in sequence with, the aforementioned proof sketch.
+            \alert{All proofs are listed in appendix}.
+        \eo{itemize}
+        \bitem{Experimental Path:}
+        \bo{itemize}{0.125cm}
+            \item Provide a detailed analysis (\textit{results}) of statistically relevant results gathered from the experiment conducted.
+            Finally, (\textit{interpretation}) argumentatively discuss your understanding of the results and/or develop a collection of probable / interesting hypothesis.
+        \eo{itemize}
+    \eo{itemize}
+}
+
+\bettersection{Conclusions and Future Work}
+
+\betterframe{Conclusions and Future Work Slide}{
+    \bo{itemize}{0.25cm}
+        \bitem{Applied Math Path:}
+        \bo{itemize}{0.125cm}
+            \item Restate (\textit{problem focus}) your problem focus in one sentence.
+            Review (\textit{solution}) in one sentence how your solution method was designed.
+            Provide (\textit{positive conclusion}) a take home message on why your method achieves that current mathematical tools can not.
+            Finally, (\textit{future work}) mention how your solution could be continued and/or applied.
+        \eo{itemize}
+        \bitem{Pure Math Path:}
+        \bo{itemize}{0.125cm}
+            \item Restate (\textit{problem focus}) your problem focus in one sentence.
+            Review (\textit{solution}) in one sentence how your solution was developed.
+            Provide (\textit{positive conclusion}) a take home message on how you results might expand human understanding.
+            Finally, (\textit{future work}) mention how your solution could be continued and/or applied.
+        \eo{itemize}
+        \bitem{Experimental Path:}
+        \bo{itemize}{0.125cm}
+            \item See Pure Math Path.
+        \eo{itemize}
+    \eo{itemize}
+}
+
+\end{document}

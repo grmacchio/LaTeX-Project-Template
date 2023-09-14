@@ -1,0 +1,66 @@
+
+\usetheme{Madrid}
+
+\usepackage{appendixnumberbeamer}
+\usepackage{caption}
+\usepackage{tikz}
+
+\usepackage{Commands/cmd_math}
+\usepackage{Packages/pkg_color}
+\usepackage{Packages/pkg_section}
+
+\usecolortheme[named=PrincetonOrange]{structure}
+\setbeamercolor{alerted text}{use=structure,fg=structure.fg}
+\usefonttheme{serif}
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\titlegraphic{\includegraphics[scale=0.07]{Figures/PU_Logo.png}}
+
+\newif\ifAllowAnimations
+\AllowAnimationstrue
+\newcommand{\bitem}[1]{\item \textbf{#1}}
+\newcommand{\iitem}[1]{\item \textit{#1}}
+\newcommand{\bo}[2]{%
+    \ifAllowAnimations
+        \begin{#1}[<+->]\setlength\itemsep{#2}
+    \else
+        \begin{#1}\setlength\itemsep{#2}
+    \fi
+}
+\newcommand{\eo}[1]{\end{#1}}
+\newcommand{\bi}[2]{\vspace{#2}\begin{#1}\setlength\itemsep{#2}}
+\newcommand{\ei}[1]{\end{#1}}
+\newcommand{\fo}{\begin{frame}{Outline}\tableofcontents\end{frame}}
+\newcommand{\ro}{\begin{frame}{Outline}\tableofcontents[currentsection]\end{frame}}
+\renewcommand\appendixname{Appendix}
+\renewcommand{\footnotesize}{\tiny}
+\renewcommand\appendixname{Appendix}
+\newcommand{\titleandoutline}{\frame{\titlepage}\fo}
+\newif\ifFirstSectionHasNotBeenCalled
+\FirstSectionHasNotBeenCalledtrue
+\newcommand{\bettersection}[1]{%
+    \ifFirstSectionHasNotBeenCalled
+        \newcommand{\SectionName}{#1}%
+        \FirstSectionHasNotBeenCalledfalse
+    \else
+        \renewcommand{\SectionName}{#1}%
+    \fi
+    \section{#1}%
+    \ro
+}
+\newcommand{\betterframe}[3][true]{%
+\ifAllowAnimations
+  \ifbool{#1}{
+        \begin{frame}{#2}{\SectionName}
+            % Empty Frame
+        \end{frame}
+        \addtocounter{framenumber}{-1}
+  }{
+    % Nothing
+  }
+\fi
+    \begin{frame}{#2}{\SectionName}
+        #3 % Content Here
+    \end{frame}%
+}
