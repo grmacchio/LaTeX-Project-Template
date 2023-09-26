@@ -22,12 +22,28 @@
 
 \addbibresource{bib.bib}
 
-\newcommand{\literatureentry}[6]{
+\newcommand{\literatureentry}[7]{
 \rule[0.0cm]{\linewidth}{1pt}
 \subsection*{#1/#2/#3 -- Literature Review Entry}
-\textbf{Brief:} #4 \\
+\textbf{Author:} #4 \\
 \vspace{-0.175cm} \\
-\textbf{Reference:} \cite{#5} \fullcite{#5} \\
+\textbf{Brief:} #5 \\
+\vspace{-0.175cm} \\
+\textbf{Reference:} \cite{#6} \fullcite{#6} \\
+\vspace{-0.175cm} \\
+\hspace*{1.5em}\textbf{Content:} \\
+\hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
+    #7
+\end{minipage}
+\vspace{-0.1cm}
+}
+
+\newcommand{\theoreticalentry}[6]{
+\rule[0.0cm]{\linewidth}{1pt}
+\subsection*{#1/#2/#3 -- Theoretical Entry}
+\textbf{Author:} #4 \\
+\vspace{-0.175cm} \\
+\textbf{Brief:} #5 \\
 \vspace{-0.175cm} \\
 \hspace*{1.5em}\textbf{Content:} \\
 \hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
@@ -36,26 +52,16 @@
 \vspace{-0.1cm}
 }
 
-\newcommand{\theoreticalentry}[5]{
-\rule[0.0cm]{\linewidth}{1pt}
-\subsection*{#1/#2/#3 -- Theoretical Entry}
-\textbf{Brief:} #4 \\
-\vspace{-0.175cm} \\
-\hspace*{1.5em}\textbf{Content:} \\
-\hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
-    #5
-\end{minipage}
-\vspace{-0.1cm}
-}
-
-\newcommand{\experimentalentry}[5]{
+\newcommand{\experimentalentry}[6]{
 \rule[0.0cm]{\linewidth}{1pt}
 \vspace{-0.375cm}\subsection*{#1/#2/#3 -- Experimental Entry}
-\textbf{Brief:} #4 \\
+\textbf{Author:} #4 \\
+\vspace{-0.175cm} \\
+\textbf{Brief:} #5 \\
 \vspace{-0.175cm} \\
 \hspace*{1.5em}\textbf{Content:} \\
 \hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
-    #5
+    #6
 \end{minipage}
 \vspace{-0.1cm}
 }
