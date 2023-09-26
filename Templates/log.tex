@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{Styles/style_log}
+% This packages brings is all log specfic custom commands.
+
+\title{Title}
+\author{Author}
+\date{Date}
+
+\begin{document}
+
+\maketitle
+
+\section*{Log}
+
+\literatureentry{YYYY}{MM}{DD}{
+% This command creates a literature review entry with the year YYYY/MM/DD. In a literature review entry you provide a year, month, day, citation id of article under review, a brief statement of the logs contents, and contents.
+    A brief statement about the log entry is put here.
+}{ArticleCitation}{
+    Here is example content showing three different types of citations (see bib.bib for more): \cite{ArticleCitation}, \cite{OnlineCitation},
+    \cite{PhDThesisCitation}, \cite{ProceedingsCitation}.
+}
+
+\theoreticalentry{YYYY}{MM}{DD}{
+% This command creates a theoretical entry with the year YYYY/MM/DD. In a theoretical entry you provide a year, month, day, a brief statement of the logs contents, and contents.
+    A brief statement about the log entry is put here.
+}{ArticleCitation}{
+    Blah Blah Blah.
+}
+
+\experimentalentry{YYYY}{MM}{DD}{
+% This command creates a experimental entry with the year YYYY/MM/DD. In a experimental entry you provide a year, month, day, a brief statement of the logs contents, and contents.
+    A brief statement about the log entry is put here.
+}{ArticleCitation}{
+    Blah Blah Blah.
+}
+
+\logprintbibliography
+% This command prints all citations gathered from bib.bib and a horizontal line break.
+
+\end{document}
