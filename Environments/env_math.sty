@@ -1,0 +1,32 @@
+
+\newenvironment{moralproof}{
+\begin{itemize}
+\item \textit{Moral Proof:}
+\begin{itemize}[leftmargin=0.85cm]}{\end{itemize}
+\end{itemize}
+}
+
+\newenvironment{formalproof}{
+\begin{itemize}
+\item \textit{Formal Proof:}
+\begin{itemize}[leftmargin=0.85cm]}{\end{itemize}
+\end{itemize}
+}
+
+\newenvironment{commonnotation}{
+\renewcommand{\labelenumi}{\textbf{(\arabic{enumi})}}
+\begin{itemize}
+\item \textit{Common Notation:}
+\begin{enumerate}[leftmargin=1cm]}{\end{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}}
+\end{itemize}
+}
+
+\newenvironment{note}{
+\renewcommand{\labelenumi}{\textbf{(\arabic{enumi})}}
+\begin{itemize}
+\item \textit{Note:}
+\begin{enumerate}[leftmargin=1cm]}{\end{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}}
+\end{itemize}
+}

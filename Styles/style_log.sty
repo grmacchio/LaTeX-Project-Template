@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{caption}
+\usepackage{changepage}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{parskip}
@@ -19,6 +20,7 @@
 
 \usepackage{Commands/cmd_math}
 \usepackage{Theorems/thm_math}
+\usepackage{Environments/env_math}
 
 \addbibresource{bib.bib}
 
@@ -32,10 +34,10 @@
 \textbf{Reference:} \cite{#6} \fullcite{#6} \\
 \vspace{-0.175cm} \\
 \hspace*{1.5em}\textbf{Content:} \\
-\hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
+\hspace*{1.5em}\begin{adjustwidth}{0.54cm}{}\vspace{-0.39cm}
     #7
-\end{minipage}
-\vspace{-0.1cm}
+\end{adjustwidth}
+\vspace{0.170cm}
 }
 
 \newcommand{\theoreticalentry}[6]{
@@ -46,10 +48,10 @@
 \textbf{Brief:} #5 \\
 \vspace{-0.175cm} \\
 \hspace*{1.5em}\textbf{Content:} \\
-\hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
+\hspace*{1.5em}\begin{adjustwidth}{0.54cm}{}\vspace{-0.39cm}
     #6
-\end{minipage}
-\vspace{-0.1cm}
+\end{adjustwidth}
+\vspace{0.170cm}
 }
 
 \newcommand{\experimentalentry}[6]{
@@ -60,10 +62,10 @@
 \textbf{Brief:} #5 \\
 \vspace{-0.175cm} \\
 \hspace*{1.5em}\textbf{Content:} \\
-\hspace*{1.5em}\begin{minipage}{0.975\linewidth}\vspace{0.4cm}
+\hspace*{1.5em}\begin{adjustwidth}{0.54cm}{}\vspace{-0.39cm}
     #6
-\end{minipage}
-\vspace{-0.1cm}
+\end{adjustwidth}
+\vspace{0.170cm}
 }
 
 \newcommand{\logprintbibliography}{\vspace{0.0cm}
