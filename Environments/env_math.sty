@@ -1,14 +1,23 @@
 
+\usepackage{Packages/pkg_color}
+
+\newenvironment{statement}{
+\begin{itemize}
+\item[1.] \textbf{\color{PrincetonOrange}Statement}
+\begin{itemize}[leftmargin=0.85cm]}{\end{itemize}
+\end{itemize}
+}
+
 \newenvironment{moralproof}{
 \begin{itemize}
-\item \textit{Moral Proof:}
+\item[2.] \textbf{\color{PrincetonOrange}Moral Proof}
 \begin{itemize}[leftmargin=0.85cm]}{\end{itemize}
 \end{itemize}
 }
 
 \newenvironment{formalproof}{
 \begin{itemize}
-\item \textit{Formal Proof:}
+\item[3.] \textbf{\color{PrincetonOrange}Formal Proof}
 \begin{itemize}[leftmargin=0.85cm]}{\end{itemize}
 \end{itemize}
 }
